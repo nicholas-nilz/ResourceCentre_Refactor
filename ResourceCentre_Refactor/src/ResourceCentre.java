@@ -3,14 +3,11 @@ import java.util.ArrayList;
 public class ResourceCentre {
 
 
+
 	/**
 	 * 
 	 */
-	private static final int ITEM_TYPE_CHROMEBOOK = 2;
-	/**
-	 * 
-	 */
-	private static final int ITEM_TYPE_CAMCODER = 1;
+	
 	/**
 	 * 
 	 */
@@ -30,9 +27,15 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	private static final int ITEM_TYPE_CHROMEBOOK = 2;
+	/**
+	 * 
+	 */
+	private static final int ITEM_TYPE_CAMCODER = 1;
 	private static final int OPTION_QUIT = 5;
 
 	public static void main(String[] args) {
+		
 
 		ArrayList<Camcorder> camcorderList = new ArrayList<Camcorder>();
 		ArrayList<Chromebook> chromebookList = new ArrayList<Chromebook>();
@@ -61,7 +64,10 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
+
 				if (itemType == ITEM_TYPE_CAMCODER) {
+
+				
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
@@ -84,6 +90,9 @@ public class ResourceCentre {
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
+
+			
+
 				if (itemType == ITEM_TYPE_CAMCODER) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
@@ -100,6 +109,9 @@ public class ResourceCentre {
 				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
+
+				
+
 				if (itemType == ITEM_TYPE_CAMCODER) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
@@ -119,6 +131,7 @@ public class ResourceCentre {
 		}
 
 	}
+
 
 	/**
 	 * 

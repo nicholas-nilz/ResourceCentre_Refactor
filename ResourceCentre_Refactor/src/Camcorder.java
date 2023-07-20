@@ -13,7 +13,10 @@ public class Camcorder extends Item{
 	
 	public String toString(){
 		String output = super.toString();
+
 		output+=String.format(" %-20d",opticalZoom);
+
+		// Write your codes here
 		return output;
 	}
 }
