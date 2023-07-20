@@ -30,6 +30,7 @@ public class Item {
 			avail = "No";
 		}
 		return avail;
+		
 	}
 	
 	public String getAssetTag() {
