@@ -2,7 +2,20 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
+<<<<<<< HEAD
     
+=======
+
+<<<<<<< HEAD
+	private static final int OPTION_QUIT = 5;
+	private static final int ITEM_TYPE_CHROMEBOOK = 2;
+	private static final int ITEM_TYPE_CAMCODER = 1;
+	private static final int OPTION_RETURN = 4;
+	private static final int OPTION_LOAN = 3;
+	private static final int OPTION_ADD = 2;
+	private static final int OPTION_VIEW = 1;
+=======
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 
 	/**
 	 * 
@@ -35,6 +48,7 @@ public class ResourceCentre {
 	 */
 	private static final int ITEM_TYPE_CAMCODER = 1;
 	private static final int OPTION_QUIT = 5;
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 
 	public static void main(String[] args) {
 		
@@ -111,9 +125,12 @@ public class ResourceCentre {
 				itemTypeMenu();
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
+<<<<<<< HEAD
+=======
 
 				
 
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 				if (itemType == ITEM_TYPE_CAMCODER) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
@@ -134,11 +151,18 @@ public class ResourceCentre {
 
 	}
 
+<<<<<<< HEAD
+	/**
+	 * 
+	 */
+	public static void itemTypeMenu() {
+=======
 
 	/**
 	 * 
 	 */
 	private static void itemTypeMenu() {
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
 		System.out.println("2. Chromebook");
@@ -189,7 +213,10 @@ public class ResourceCentre {
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			output += String.format("%-84s\n", chromebookList.get(i).toString());
+<<<<<<< HEAD
+=======
 
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 		}
 		return output;
 	}
@@ -264,9 +291,15 @@ public class ResourceCentre {
 		for (int i = 0; i < camcorderList.size(); i++) {
 					
 			String assetTag = camcorderList.get(i).getAssetTag();
+<<<<<<< HEAD
+			boolean availibility = camcorderList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)				
+					&& availibility == true) {
+=======
 			boolean availability = camcorderList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)				
 					&& availability == true) {
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
@@ -300,9 +333,15 @@ public class ResourceCentre {
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			String assetTag = chromebookList.get(i).getAssetTag();
+<<<<<<< HEAD
+			boolean availibility = chromebookList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == true) {
+=======
 			boolean availability = chromebookList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& availability == true) {
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 				
 				chromebookList.get(i).setIsAvailable(false);
 				chromebookList.get(i).setDueDate(dueDate);
@@ -337,9 +376,15 @@ public class ResourceCentre {
 		for (int i = 0; i < camcorderList.size(); i++) {
 
 			String assetTag = camcorderList.get(i).getAssetTag();
+<<<<<<< HEAD
+			boolean availibility = camcorderList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == false) {
+=======
 			boolean availability = camcorderList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& availability == false) {
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 				camcorderList.get(i).setIsAvailable(true);
 				camcorderList.get(i).setDueDate("");
 				isReturned = true;
@@ -371,9 +416,15 @@ public class ResourceCentre {
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			String assetTag = chromebookList.get(i).getAssetTag();
+<<<<<<< HEAD
+			boolean availibility = chromebookList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == false) {
+=======
 			boolean availability = chromebookList.get(i).getIsAvailable();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& availability == false) {
+>>>>>>> branch 'master' of https://github.com/nicholas-nilz/ResourceCentre_Refactor
 				chromebookList.get(i).setIsAvailable(true);
 				chromebookList.get(i).setDueDate("");
 				isReturned = true;
@@ -395,5 +446,6 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
+	
 
 }
